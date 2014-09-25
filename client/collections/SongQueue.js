@@ -27,4 +27,6 @@ var SongQueue = Songs.extend({
     this.at(0).play();
   }
 
+  // TODO: Clean this shit up. also wtf?
+
 });
