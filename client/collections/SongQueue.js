@@ -18,7 +18,20 @@ var SongQueue = Songs.extend({
     })
 
     this.on('dequeue', function(song){
+
       this.remove(song);
+
+      // this is a problem. If we dequeue from the top, np. when we dequeue from
+      // the bottom then length > 0 and we trigger play first
+
+      if ( this.length > 0){
+        this.playFirst();
+      }
+
+      if (this.length === 0) {
+        song.stop();
+      }
+
     })
 
   },
@@ -26,7 +39,5 @@ var SongQueue = Songs.extend({
   playFirst: function(){
     this.at(0).play();
   }
-
-  // TODO: Clean this shit up. also wtf?
 
 });
