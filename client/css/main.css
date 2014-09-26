@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  cursor: pointer;
+}
+
+td:nth-child(1) { width: 70px; }
+td:nth-child(2) { width: 220px; }
+td:nth-child(3) { width: 20px; }
+
+audio {
+  width: 100%;
+}
+
+.main {
+  margin: 100px auto;
+  width: 450px;
+  background-color: lightgray;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0 0 #999;
+}
+
+.library {
+  background-color: aliceblue;
+}
+
+.library tr:hover {
+  color: #086A87;
+}
+
+.queue {
+  background-color: lightblue
+}
+
+.queue tr:hover {
+  color: #6E6E6E;
+}
